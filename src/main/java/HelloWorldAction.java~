@@ -1,0 +1,16 @@
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HelloWorldAction  extends actionSupport {
+
+    private MessageStore messageStore;
+
+    public String execute() {
+        messageStore = new MessageStore();
+        return SUCCESS;
+    }
+
+    public String getMessage() {
+        return messageStore;
+    }
+
+}

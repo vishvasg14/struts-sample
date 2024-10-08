@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+
+    <package name="basicstruts2" extends="struts-default">
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+
+        <action name="hello" class="com.example.HelloWorldAction" >
+            <result name="success">/HelloWorld.jsp</result>
+        </action>
+
+
+        <!--this is form action-->
+        <action name="submitForm" class="com.example.fromAction" method="submitForm">
+            <result name="success">/result.jsp</result>
+            <result name="fail">/fail.jsp</result>
+            <result name="vishvas">/myPage.jsp</result>
+
+        </action>
+
+        <action name="showForm" class="com.example.fromAction" method="showForm">
+            <result name="success">/showForm.jsp</result>
+        </action>
+        <!--this end of form action-->
+
+    </package>
+</struts>
